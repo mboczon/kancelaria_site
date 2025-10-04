@@ -1,0 +1,339 @@
+/* Reset stylów */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  color: #000;
+  line-height: 1.6;
+}
+
+/* Nagłówek */
+header {
+  background-color: #ffffff;
+  padding: 10px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.4em;
+}
+
+header .logo-container img {
+  height: 120px;
+  width: auto;
+  margin-right: 10px;
+}
+
+nav a {
+  margin: 0 20px;
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  font-size: 1em;
+  word-break: break-word;
+}
+
+nav a:hover {
+  color: #42b8fd;
+}
+
+/* Główna treść */
+main {
+  padding: 20px 40px;
+  background-color: #ffffff;
+}
+
+p {
+  text-indent: 30px;
+}
+
+.zakres p {
+  text-indent: 0px;
+}
+
+.zakres #p1 {
+  font-size: 1.4em;
+  font-weight: bold;
+}
+
+
+.full-width {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+/* Sekcje podstron z niebieskim tłem */
+.section-header {
+  background-color: #263180;
+  color: white;
+  padding: 15px 40px;
+  margin-bottom: 20px;
+  font-size: 1.4em;
+  font-weight: bold;
+}
+
+/* Styl treści podstron */
+.section-content {
+  margin-bottom: 40px;
+  background-color: #263180;
+  padding: 20px 40px;
+  color: white;
+}
+
+/* Stopka */
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: #ffffff;
+  padding: 20px 40px;
+  border-top: 2px solid #ccc;
+}
+
+footer div {
+  /*flex: 1;*/
+  margin: 0 10px;
+}
+
+footer p, footer a {
+  color: #000;
+  font-size: 0.95em;
+}
+
+footer img {
+  height: 100px;
+  width: auto;
+  margin-left: 20px;
+}
+
+.footer-right {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.footer-right .location {
+  flex: 1;
+}
+
+.footer-right .location-image img {
+  height: 100px;
+  width: auto;
+  margin-left: 20px;
+}
+
+/* Styl sekcji zespołu */
+.team-member {
+  display: flex;
+  align-items: flex-start;
+  margin: 30px 40px;
+  background-color: #ffffff;
+  padding: 20px;
+}
+
+.team-member img {
+  height: 200px;
+  width: auto;
+  margin-right: 20px;
+  object-fit: cover;
+}
+
+.team-info h3 {
+  font-size: 1.2em;
+  color: #42b8fd;
+  margin-bottom: 10px;
+}
+
+.team-info p {
+  font-size: 1em;
+  color: white;
+}
+
+/* Autorzy strony */
+.team-section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0px;
+  background-color: #263180;
+  color: white;
+  padding: 20px;
+}
+
+.team-section img {
+  width: 200px;
+  height: 200px;   /* wszystkie zdjęcia mają tę samą wysokość */
+  object-fit: cover; /* przycięcie obrazka, żeby ładnie wyglądał */
+  margin-right: 20px;
+  border-radius: 6px;
+}
+
+.team-info h3 {
+  color: #42b8fd;
+  font-size: 1.3em;
+  margin-bottom: 10px;
+}
+
+.team-info p {
+  margin: 0;
+  line-height: 1.5;
+  text-indent: 0px;
+}
+
+/* Autorzy strony */
+.authors {
+  text-align: center;
+  background-color: #263180;
+}
+
+.authors h2 {
+  color: white;
+  margin-bottom: 30px;
+}
+
+.author-grid {
+  display: flex;
+  justify-content: space-around;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.author {
+  text-align: center;
+  color: white;
+  background-color: #263180;
+}
+
+.author img {
+  width: 180px;
+  height: 180px;
+  object-fit: contain;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.author h3 {
+  margin: 0;
+  font-size: 1.1em;
+}
+
+.author p {
+  margin: 0;
+  font-size: 0.95em;
+  margin-bottom: 40px;
+  text-indent: 0px;
+}
+
+.zakres-content {
+  background: url("photos/temida.webp") no-repeat center center;
+  background-size: cover;
+  color: white;
+  background-color: #263180; /* kolor zapasowy pod grafikę */
+}
+
+.more-link {
+  color: #4287f5;
+}
+
+/* Wszystkie obrazki skalują się responsywnie */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsywność dla urządzeń mobilnych */
+@media (max-width: 768px) {
+  /* Nagłówek */
+  header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  nav a {
+    display: block;
+    margin: 10px 0;
+  }
+
+  /* Main */
+  main {
+    padding: 15px 20px;
+  }
+
+  .section-header,
+  .section-content {
+    padding: 15px 20px;
+  }
+
+  /* Stopka */
+  footer {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  footer div {
+    margin: 15px 0;
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .footer-right {
+    flex-direction: column;
+  }
+
+  .footer-right img {
+    margin: 10px 0 0 0;
+  }
+
+  /* Sekcja zespołu */
+  .team-member {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 20px;
+  }
+
+  .team-member img {
+    margin: 0 0 15px 0;
+  }
+
+  /* Sekcja autorów */
+  .team-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .team-section img {
+    margin: 0 0 15px 0;
+  }
+
+  .author-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+@media (max-width: 480px) {
+  header .logo-container img {
+    height: 80px;
+  }
+
+  nav a {
+    font-size: 0.9em;
+  }
+
+  .team-member img, .team-section img, .author img {
+    width: 140px;
+    height: 140px;
+  }
+
+  .section-header {
+    font-size: 1.1em;
+  }
+}
